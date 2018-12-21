@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="/includes/menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<div class="container-fluid">
+			<h:form id="frmSalvar">
+				<p:growl id="growl" sticky="true" showDetail="true"/>
+				<p:wizard>
+					<p:tab id="pessoal" title="pessoal">
+						<p:panel header="Informações Pessoais">
+							<h:panelGrid columns="2" cellpadding="5" id="painel_1">
+								
+								<h:outputLabel value="2.Idade: " />
+								<div>
+									<h:inputText class="form-control" />
+								</div>
+								
+								<h:outputLabel  value="1.Qual é o Sexo?: " />
+								
+								<div class="dropdown">
+									<p:selectOneMenu >
+										<f:selectItem itemLabel="Selecione um item" />
+										<f:selectItem itemLabel="Masculino"  />
+										<f:selectItem itemLabel="Feminino"  />
+									</p:selectOneMenu>
+								</div>
+								
+								<h:outputLabel value="3.Estado Civil: " />
+								<div class="dropdown">
+									<p:selectOneMenu >
+										<f:selectItem itemLabel="Secione um" />
+										<f:selectItem itemLabel="Solteiro(a)"  />
+										<f:selectItem itemLabel="Casado ou Vivendo com parceiro(a)"  />
+										<f:selectItem itemLabel="Viuvo(a), desquitado(a) ou divorciado(a)"  />
+									</p:selectOneMenu>
+								</div>
+								
+								<h:outputLabel value="4.Até que série estudou ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Secione um" />
+										<f:selectItem itemLabel="Fundamental Incompleto" />
+										<f:selectItem itemLabel="Fundamental Completo" />
+										<f:selectItem itemLabel="Medio Incompleto"  />
+										<f:selectItem itemLabel="Medio Completo"  />
+										<f:selectItem itemLabel="Superior Incompleto" />
+										<f:selectItem itemLabel="Superior Completo"/>
+									</p:selectOneMenu>
+								</div>
+							</h:panelGrid>
+						
+						</p:panel>
+					</p:tab>
+					
+					<p:tab id="Estilo" title="Estilo">
+						<p:panel header="Estilo de Vida">
+						<p:messages />
+							<h:panelGrid columns="2" cellpadding="5" id="painel_2">
+							
+								<p:outputLabel value="5.Fuma ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Nunca Fumei" itemValue="" />
+										<f:selectItem itemLabel="Parei de Fumar a mais de 2 anos" itemValue="" />
+										<f:selectItem itemLabel="Parei de Fumar a menos de 2 anos" itemValue="" />
+										<f:selectItem itemLabel="Fumo menos de 10 cigarros por dia" itemValue="" />
+										<f:selectItem itemLabel="Fumo de 10 a 20 cigarros por dia" itemValue="" />
+										<f:selectItem itemLabel="Fumo mais de 20 cigarros por dia" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="6. Toma bebida alcoolica ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Nenhuma, eu não bebo" itemValue="" />
+										<f:selectItem itemLabel="1 a 7 doses" itemValue="" />
+										<f:selectItem itemLabel="8 a 14 doses" itemValue="" />
+										<f:selectItem itemLabel="15 ou mais doses" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="7.Nos ultimos 30 dias o(a) senhor(a) tomou 5 ou mais 
+								doses de bebidas alcoolicas numa mesma ocasião?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Sim" itemValue="" />
+										<f:selectItem itemLabel="Não" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="8. Quando o(a) senhor(a) está em ambiente ensolarado por mais de 30 minutos, 
+								com que frequencia usa protetor solar, boné ou chapeu ou outro tipo de proteção contra o sol ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Não, Nunca" itemValue="" />
+										<f:selectItem itemLabel="Sim, apenas eventualmente(às vezes)" itemValue="" />
+										<f:selectItem itemLabel="Sim, Sempre ou quase sempre" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+							</h:panelGrid>
+						
+						</p:panel>
+					</p:tab>
+					
+					<p:tab id="vida" title="Qualidade">
+						<p:panel header="Qualidade de Vida">
+						<p:messages />
+							<h:panelGrid columns="2" cellpadding="5" id="painel_3">
+							
+								<p:outputLabel value="9. Como o(a) senhor(a) classifica o nível de estresse em sua vida ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Raramente estressado, vivendo muito bem" itemValue="" />
+										<f:selectItem itemLabel="Às vezes estressado, vivendo razoavelmente bem" itemValue="" />
+										<f:selectItem itemLabel="Quase sempre estressado, enfrentando problemas com frequencia" itemValue="" />
+										<f:selectItem itemLabel="Sempre estressado, com dificuldade para enfrentar a vida diária" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="10. Com que frequencia o(a) senhor(a) considera que dorme bem ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Sempre ou quase sempre" itemValue="" />
+										<f:selectItem itemLabel="Às vezes" itemValue="" />
+										<f:selectItem itemLabel="Nunca, raramente" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="11. Como o(a) senhor(a) classifica o estado de saúde atual ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Excelente" itemValue="" />
+										<f:selectItem itemLabel="Bom" itemValue="" />
+										<f:selectItem itemLabel="Regular" itemValue="" />
+										<f:selectItem itemLabel="Ruim" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+							</h:panelGrid>
+						</p:panel>
+					</p:tab>
+					
+					<p:tab id="ws" title="Relação">
+						<p:panel header="Relacionamentos">
+						<p:messages />
+							<h:panelGrid columns="2" cellpadding="5" id="painel_4">
+							
+								<p:outputLabel value="12. De uma maneira geral, como o(a) senhor(a) 
+								classifica a qualidade dos relacionamentos que mantém com outras pessoas(amigos, colegas de trabalho, chefes) ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Excelente" itemValue="" />
+										<f:selectItem itemLabel="Bom" itemValue="" />
+										<f:selectItem itemLabel="Regular" itemValue="" />
+										<f:selectItem itemLabel="Ruim" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="13. De uma maneira geral, como o(a) senhor(a) 
+								se sente em relação a sua vida [Considere a sua percepção em relação a sua vida como um todo, 
+								incluindo o tempo que passa no trabalho, o lazer e o tempo que passa em casa , 
+								na companhia de amigos e familiares] ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Muito Bom" itemValue="" />
+										<f:selectItem itemLabel="Bem" itemValue="" />
+										<f:selectItem itemLabel="Mal" itemValue="" />
+										<f:selectItem itemLabel="Muito Mal" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="14. De uma maneira geral, como o(a) senhor(a) 
+								classifica o seu nível pessoal de integração/adaptação ao ambiente que o rodeia ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Excelente" itemValue="" />
+										<f:selectItem itemLabel="Bom" itemValue="" />
+										<f:selectItem itemLabel="Regular" itemValue="" />
+										<f:selectItem itemLabel="Ruim" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+							</h:panelGrid>
+						
+						</p:panel>
+					</p:tab>
+					
+					<p:tab id="ali" title="Alimento">
+						<p:panel header="Alimentação">
+						<p:messages />
+							<h:panelGrid columns="2" cellpadding="5" id="painel_5">
+							
+								<p:outputLabel value="15. Durante uma semana normal, com que frequencia o senhor come frutas(ou toma suco de frutas naturais) ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Nunca" itemValue="" />
+										<f:selectItem itemLabel="1 a 3 vezes por semana" itemValue="" />
+										<f:selectItem itemLabel="4 a 6 vezes por semana" itemValue="" />
+										<f:selectItem itemLabel="Diariamente, 1 vez por dia" itemValue="" />
+										<f:selectItem itemLabel="Diariamente, 2 ou mais vez por dia" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="16. Durante uma semana normal, 
+								com que frequencia o senhor come verduras, hortaliças e saladas verdes ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Nunca" itemValue="" />
+										<f:selectItem itemLabel="1 a 3 vezes por semana" itemValue="" />
+										<f:selectItem itemLabel="4 a 6 vezes por semana" itemValue="" />
+										<f:selectItem itemLabel="Diariamente, 1 vez por dia" itemValue="" />
+										<f:selectItem itemLabel="Diariamente, 2 ou mais vez por dia" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+								
+								<p:outputLabel value="17. Durante uma semana normal, 
+								com que frequencia o senhor toma refrigerantes ou sucos artificiais(refrescos) ?: " />
+								<div class="dropdown">
+									<p:selectOneMenu>
+										<f:selectItem itemLabel="Nunca" itemValue="" />
+										<f:selectItem itemLabel="1 a 3 vezes por semana" itemValue="" />
+										<f:selectItem itemLabel="4 a 6 vezes por semana" itemValue="" />
+										<f:selectItem itemLabel="Diariamente, 1 vez por dia" itemValue="" />
+										<f:selectItem itemLabel="Diariamente, 2 ou mais vez por dia" itemValue="" />
+									</p:selectOneMenu>
+								</div>
+							</h:panelGrid>
+							
+						</p:panel>
+					</p:tab>
+					
+					<p:tab id="ati" title="Atividade">
+						<p:panel header="Atividades Físicas">
+						<p:messages />
+							<h:panelGrid columns="2" cellpadding="5" id="painel_6">
+							
+									<p:outputLabel value="18. O senhor realiza regularmente, 
+									algum tipo de atividade fisica no seu lazer, como exercicios fisicos ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Não, nao estou interessado" itemValue="" />
+											<f:selectItem itemLabel="Não, mas estou interessado" itemValue="" />
+											<f:selectItem itemLabel="Sim, 1 ou 2 vezes por semana" itemValue="" />
+											<f:selectItem itemLabel="Sim, 3 ou 4 vezes por semana" itemValue="" />
+											<f:selectItem itemLabel="Sim, 5 ou mais vezes por semana" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="19. Na maioria dos dias da semana, 
+									como o senhor se desloca para ir ao trabalho ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="A pé, caminhando" itemValue="" />
+											<f:selectItem itemLabel="De bicicleta" itemValue="" />
+											<f:selectItem itemLabel="De onibus" itemValue="" />
+											<f:selectItem itemLabel="De carro ou moto" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="20. Em um dia normal de semana, 
+									quantas horas por dia aproximadamente o senhor costuma assistir televisão ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Não assisto TV em dias da semana" itemValue="" />
+											<f:selectItem itemLabel="Menos de um horas por dia" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 horas por dia" itemValue="" />
+											<f:selectItem itemLabel="2 a 3 horas por dia" itemValue="" />
+											<f:selectItem itemLabel="3 a 4 horas por dia" itemValue="" />
+											<f:selectItem itemLabel="Mais de 4 horas por dia" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="21. Em um dia normal do final de semana, 
+									quantas horas por dia aproximadamente o senhor costuma assistir televisão ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Não assisto TV em dias da semana" itemValue="" />
+											<f:selectItem itemLabel="Menos de um horas por dia" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 horas por dia" itemValue="" />
+											<f:selectItem itemLabel="2 a 3 horas por dia" itemValue="" />
+											<f:selectItem itemLabel="3 a 4 horas por dia" itemValue="" />
+											<f:selectItem itemLabel="Mais de 4 horas por dia" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+								
+									<div>
+										<h3>Fale um pouco sobre seu trabalho</h3>
+									</div>
+									
+									<p:outputLabel value="22. Nos ultimos 30 dias, 
+									em quantos dias o senhor precisou pedir afastamento do trabalho por motivos de saúde ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Nenhum" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 dias" itemValue="" />
+											<f:selectItem itemLabel="3 a 7 dias" itemValue="" />
+											<f:selectItem itemLabel="8 dias ou mais" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="23. Nos ultimos 30 dias, 
+									em quantos dias o senhor não sentiu vontade de vir ao trabalho ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Nenhum" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 dias" itemValue="" />
+											<f:selectItem itemLabel="3 a 7 dias" itemValue="" />
+											<f:selectItem itemLabel="8 dias ou mais" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="24. Nos ultimos 30 dias, 
+									em quantos dias o senhor se sentiu indisposto 
+									ou sem animo para realizar tarefas que o seu trabalho exige ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Nenhum" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 dias" itemValue="" />
+											<f:selectItem itemLabel="3 a 7 dias" itemValue="" />
+											<f:selectItem itemLabel="8 dias ou mais" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="25. Nos ultimos 30 dias, 
+									em quantos dias o senhor sentiu dificuldade para se concentrar no trabalho ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Nenhum" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 dias" itemValue="" />
+											<f:selectItem itemLabel="3 a 7 dias" itemValue="" />
+											<f:selectItem itemLabel="8 dias ou mais" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="26. Nos ultimos 30 dias, 
+									em quantos dias o senhor sentiu dores ou desconforto ao 
+									realizar as tarefas que o seu trabalho exige ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Nenhum" itemValue="" />
+											<f:selectItem itemLabel="1 a 2 dias" itemValue="" />
+											<f:selectItem itemLabel="3 a 7 dias" itemValue="" />
+											<f:selectItem itemLabel="8 dias ou mais" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									
+							</h:panelGrid>
+						</p:panel>
+					</p:tab>
+					
+					<p:tab id="inte" title="Interesses">
+						<p:panel header="Seus Interesses">
+						<p:messages />
+							<h:panelGrid columns="2" cellpadding="5" id="painel_7">
+									<p:outputLabel value="27. Em sua opinião, 
+									qual seria a melhor hora do dia para você participar de atividades de lazer na empresa ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Antes de iniciar o trabalho" itemValue="" />
+											<f:selectItem itemLabel="No termino do expediante de trabalho" itemValue="" />
+											<f:selectItem itemLabel="Num intervalo, durante o expediente de trabalho" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="28. Existem váris maneiras de se obter informações sobre estilo de vida saudável no local de trabalho.
+									Qual das opções listadas representa a sua preferencia ?: " />
+									<div class="dropdown">
+										<p:selectCheckboxMenu label="Escolha Abaixo">
+											<f:selectItem itemLabel="Panfletos / Folhetos" itemValue="" />
+											<f:selectItem itemLabel="Palestras" itemValue="" />
+											<f:selectItem itemLabel="Cursos" itemValue="" />
+											<f:selectItem itemLabel="Filme / Vídeos" itemValue="" />
+											<f:selectItem itemLabel="Discussões em grupo" itemValue="" />
+											<f:selectItem itemLabel="Teatro" itemValue="" />
+											<f:selectItem itemLabel="Outro(s)" itemValue="" />
+										</p:selectCheckboxMenu>
+									</div>
+									
+									<p:outputLabel value="29. Como você gostaria que os serviços de lazer do SESI 
+									ajudassem você a melhorar seu estilo de vida, adotando atitudes e comportamentos mais saudaveis ?: " />
+									<div class="dropdown">
+										<p:selectOneMenu>
+											<f:selectItem itemLabel="Gostaria de obter mais informações(Cartilhas, manuais...)" itemValue="" />
+											<f:selectItem itemLabel="Gostaria de participar de um programa de exercícios" itemValue="" />
+											<f:selectItem itemLabel="Gostaria de ter opções mais saudaveis de alimentação" itemValue="" />
+											<f:selectItem itemLabel="Gostaria de receber algum tipo de incentivo da empresa" itemValue="" />
+											<f:selectItem itemLabel="Gostaria de poder participar de cursos e palestras" itemValue="" />
+											<f:selectItem itemLabel="Gostaria de poder usar instalações de um clube ou academia" itemValue="" />
+											<f:selectItem itemLabel="Outro(a)" itemValue="" />
+										</p:selectOneMenu>
+									</div>
+									
+									<p:outputLabel value="30. Qual a sua preferencia em termos de atividades físicas de lazer ?: " />
+									<div class="dropdown">
+										<p:selectCheckboxMenu label="Escolha Abaixo" panelStyle="width:250px">
+											<f:selectItem itemLabel="Não participo de atividades físicas no lazer"  />
+											<f:selectItem itemLabel="Atividades físicas e esporte em contato com a natureza"  />
+											<f:selectItem itemLabel="Atividades físicas em academia de ginática	"  />
+											<f:selectItem itemLabel="Dança de salão"  />
+											<f:selectItem itemLabel="Esportes"  />
+											<f:selectItem itemLabel="Exercícios Fisicos em parques ou ruas"  />
+											<f:selectItem itemLabel="Ioga, tai-chi-chuan" itemValue="" />
+											<f:selectItem itemLabel="Outro(a)" itemValue="" />
+										</p:selectCheckboxMenu>
+									</div>
+									
+									<p:outputLabel value="31. Qual a sua preferencia em termos de atividades de lazer artístico-culturais ?: " />
+									<div class="dropdown">
+										<p:selectCheckboxMenu label="Escolha Abaixo" panelStyle="width:250px">
+											<f:selectItem itemLabel="Teatro"  />
+											<f:selectItem itemLabel="Musica"  />
+											<f:selectItem itemLabel="Dança	"  />
+											<f:selectItem itemLabel="Cinema e Vídeo"  />
+											<f:selectItem itemLabel="Artes Plasticas"  />
+											<f:selectItem itemLabel="Fotografia"  />
+											<f:selectItem itemLabel="Outro(a)" itemValue="" />
+										</p:selectCheckboxMenu>
+									</div>
+									
+							</h:panelGrid>
+						</p:panel>
+					</p:tab>
+					<!-- Tabela de confirmação de dados -->
+					<p:tab id="conf" title="Confirmação">
+						<p:panel header="Confirmação">
+						<p:messages />
+							<h:panelGrid id="confirmacao" columns="3" columnClasses="grid,grid,grid">
+								<!-- Painel Pessoal -->
+								<h:panelGrid columns="2" columnClasses="label,value">
+								
+									<h:outputText value="Idade: " />
+									<h:outputText styleClass="outputLabel" />
+									
+									<h:outputText value="Sexo: " />
+									<h:outputText styleClass="outputLabel" />
+									
+									<h:outputText value="Estado Civil: " />
+									<h:outputText styleClass="outputLabel" />
+									
+									<h:outputText value="Escolaridade: " />
+									<h:outputText styleClass="outputLabel" />
+									
+								</h:panelGrid>
+								<!-- Painel DE Estilo de vida -->
+								<h:panelGrid columns="2" columnClasses="label,value">
+								
+									<h:outputText value="Fuma? " />
+									<h:outputText styleClass="outputLabel" />
+									
+									<h:outputText value="Bebida alcoolica: " />
+									<h:outputText styleClass="outputLabel" />
+									
+								</h:panelGrid>
+								<div>
+									<h1>Obrigado pela sua participação nesta pesquisa!</h1>
+								</div>
+							</h:panelGrid>
+							<p:commandButton value="Submit" update="growl" process="@this"/>
+						</p:panel>
+					</p:tab>
+					
+				</p:wizard>
+				
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>

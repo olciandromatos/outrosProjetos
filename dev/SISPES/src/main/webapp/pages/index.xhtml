@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/modeloSistema.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="/menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<h:form >
+			<h:panelGrid columns="1" cellpadding="5" >
+				<h2>Informações Pessoais</h2>
+				<p:outputLabel value="1.Qual é o Sexo?: " />
+				<p:selectOneRadio>
+					<f:selectItem itemLabel="Masculino" itemValue="" />
+					<f:selectItem itemLabel="Feminino" itemValue="" />
+				</p:selectOneRadio>
+			
+			
+				<p:outputLabel value="2.Idade: " />
+				<p:inputText />
+				
+				<p:outputLabel value="3.Estado Civil: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Secione um" />
+					<f:selectItem itemLabel="Solteiro(a)" itemValue="" />
+					<f:selectItem itemLabel="Casado ou Vivendo com parceiro(a)" itemValue="" />
+					<f:selectItem itemLabel="Viuvo(a), desquitado(a) ou divorciado(a)" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="4.Até que série estudou ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Secione um" />
+					<f:selectItem itemLabel="Fundamental Incompleto" itemValue="" />
+					<f:selectItem itemLabel="Fundamental Completo" itemValue="" />
+					<f:selectItem itemLabel="Medio Incompleto" itemValue="" />
+					<f:selectItem itemLabel="Medio Completo" itemValue="" />
+					<f:selectItem itemLabel="Superior Incompleto" itemValue="" />
+					<f:selectItem itemLabel="Superior Completo" itemValue="" />
+				</p:selectOneMenu>
+				
+				<h2>Estilo de Vida</h2>
+				<h3>Comportamento Preventivo</h3>
+				
+				<p:outputLabel value="5.Fuma ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Nunca Fumei" itemValue="" />
+					<f:selectItem itemLabel="Parei de Fumar a mais de 2 anos" itemValue="" />
+					<f:selectItem itemLabel="Parei de Fumar a menos de 2 anos" itemValue="" />
+					<f:selectItem itemLabel="Fumo menos de 10 cigarros por dia" itemValue="" />
+					<f:selectItem itemLabel="Fumo de 10 a 20 cigarros por dia" itemValue="" />
+					<f:selectItem itemLabel="Fumo mais de 20 cigarros por dia" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="6. Toma bebida alcoolica ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Nenhuma, eu não bebo" itemValue="" />
+					<f:selectItem itemLabel="1 a 7 doses" itemValue="" />
+					<f:selectItem itemLabel="8 a 14 doses" itemValue="" />
+					<f:selectItem itemLabel="15 ou mais doses" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="7.Nos ultimos 30 dias o(a) senhor(a) tomou 5 ou mais doses de bebidas alcoolicas numa mesma ocasião?: " />
+				<p:selectOneRadio>
+					<f:selectItem itemLabel="Sim" itemValue="" />
+					<f:selectItem itemLabel="Não" itemValue="" />
+				</p:selectOneRadio>
+				
+				<p:outputLabel value="8. Quando o(a) senhor(a) está em ambiente ensolarado por mais de 30 minutos, 
+				com que frequencia usa protetor solar, boné ou chapeu ou outro tipo de proteção contra o sol ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Não, Nunca" itemValue="" />
+					<f:selectItem itemLabel="Sim, apenas eventualmente(às vezes)" itemValue="" />
+					<f:selectItem itemLabel="Sim, Sempre ou quase sempre" itemValue="" />
+				</p:selectOneMenu>
+				<h3>Percepção de Estresse, Sono, e nível de saúde</h3>
+				<p:outputLabel value="9. Como o(a) senhor(a) classifica o nível de estresse em sua vida ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Raramente estressado, vivendo muito bem" itemValue="" />
+					<f:selectItem itemLabel="Às vezes estressado, vivendo razoavelmente bem" itemValue="" />
+					<f:selectItem itemLabel="Quase sempre estressado, enfrentando problemas com frequencia" itemValue="" />
+					<f:selectItem itemLabel="Sempre estressado, com dificuldade para enfrentar a vida diária" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="10. Com que frequencia o(a) senhor(a) considera que dorme bem ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Sempre ou quase sempre" itemValue="" />
+					<f:selectItem itemLabel="Às vezes" itemValue="" />
+					<f:selectItem itemLabel="Nunca, raramente" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="11. Como o(a) senhor(a) classifica o estado de saúde atual ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Excelente" itemValue="" />
+					<f:selectItem itemLabel="Bom" itemValue="" />
+					<f:selectItem itemLabel="Regular" itemValue="" />
+					<f:selectItem itemLabel="Ruim" itemValue="" />
+				</p:selectOneMenu>
+				
+				<h3>Relacionamentos</h3>
+				<p:outputLabel value="12. De uma maneira geral, como o(a) senhor(a) 
+				classifica a qualidade dos relacionamentos que mantém com outras pessoas(amigos, colegas de trabalho, chefes) ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Excelente" itemValue="" />
+					<f:selectItem itemLabel="Bom" itemValue="" />
+					<f:selectItem itemLabel="Regular" itemValue="" />
+					<f:selectItem itemLabel="Ruim" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="13. De uma maneira geral, como o(a) senhor(a) 
+				se sente em relação a sua vida [Considere a sua percepção em relação a sua vida como um todo, 
+				incluindo o tempo que passa no trabalho, o lazer e o tempo que passa em casa , 
+				na companhia de amigos e familiares] ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Muito Bom" itemValue="" />
+					<f:selectItem itemLabel="Bem" itemValue="" />
+					<f:selectItem itemLabel="Mal" itemValue="" />
+					<f:selectItem itemLabel="Muito Mal" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="14. De uma maneira geral, como o(a) senhor(a) 
+				classifica o seu nível pessoal de integração/adaptação ao ambiente que o rodeia ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Excelente" itemValue="" />
+					<f:selectItem itemLabel="Bom" itemValue="" />
+					<f:selectItem itemLabel="Regular" itemValue="" />
+					<f:selectItem itemLabel="Ruim" itemValue="" />
+				</p:selectOneMenu>
+				
+				<h3>Alimentação</h3>
+				
+				<p:outputLabel value="15. Durante uma semana normal, com que frequencia o senhor come frutas(ou toma suco de frutas naturais) ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Nunca" itemValue="" />
+					<f:selectItem itemLabel="1 a 3 vezes por semana" itemValue="" />
+					<f:selectItem itemLabel="4 a 6 vezes por semana" itemValue="" />
+					<f:selectItem itemLabel="Diariamente, 1 vez por dia" itemValue="" />
+					<f:selectItem itemLabel="Diariamente, 2 ou mais vez por dia" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="16. Durante uma semana normal, 
+				com que frequencia o senhor come verduras, hortaliças e saladas verdes ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Nunca" itemValue="" />
+					<f:selectItem itemLabel="1 a 3 vezes por semana" itemValue="" />
+					<f:selectItem itemLabel="4 a 6 vezes por semana" itemValue="" />
+					<f:selectItem itemLabel="Diariamente, 1 vez por dia" itemValue="" />
+					<f:selectItem itemLabel="Diariamente, 2 ou mais vez por dia" itemValue="" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="17. Durante uma semana normal, 
+				com que frequencia o senhor toma refrigerantes ou sucos artificiais(refrescos) ?: " />
+				<p:selectOneMenu>
+					<f:selectItem itemLabel="Nunca" itemValue="" />
+					<f:selectItem itemLabel="1 a 3 vezes por semana" itemValue="" />
+					<f:selectItem itemLabel="4 a 6 vezes por semana" itemValue="" />
+					<f:selectItem itemLabel="Diariamente, 1 vez por dia" itemValue="" />
+					<f:selectItem itemLabel="Diariamente, 2 ou mais vez por dia" itemValue="" />
+				</p:selectOneMenu>
+				
+				<h3>Atividades Físicas</h3>
+				
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

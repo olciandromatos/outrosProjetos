@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+.ui-selectonemenu .ui-selectonemenu-trigger{
+	border-right: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+    width: 24px !important;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 3px;
+}
+}
